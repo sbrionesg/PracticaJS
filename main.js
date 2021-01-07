@@ -70,10 +70,10 @@ let num = 5
 let rec = num % 2;
 switch (rec) {
     case 0:
-        console.log(`${rec} - ${num} Es Par`);
+        //console.log(`${rec} - ${num} Es Par`);
         break;
     case 1:
-        console.log(`${rec} - ${num} Es Negativo`);
+        //console.log(`${rec} - ${num} Es Negativo`);
         break;
     
         default:
@@ -86,8 +86,15 @@ console.log("Salí del switch")
 //bucles incremento ++
 //while
 let i = 0
-console.log("bucle while", colores)
+//console.log("bucle while", colores)
 while(i < colores.length && colores[i] != "blue"){
-    console.log(i, colores[i])
+   // console.log(i, colores[i])
     i = i + 1
 }
+
+//bucle for usado más para incrementos o decrementos automáticos
+console.log("recorrido for in", colores)
+for(let i = 0; i < colores.length; i++) {
+    console.log(i, colores[i]);
+}
+
