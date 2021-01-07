@@ -48,16 +48,37 @@ console.log('Objeto', teacher.conocimientos.lenguajes[1], teacher.conocimientos.
 
 //ESTRUCTURAS DE CONTROL 
 //if
+// + - * / % operaciones matemáticas
+// < > == === >= <= != operadores relacionales
+// && || ! operadores lógicos 
 let n1 = 5
 let n2 = 5
 if (num1 === undefined)
-    console.log(`${num1}=undefined`);
+    //console.log(`${num1}=undefined`);
 if (num2 === null)
-    console.log(`${num2}=null`);
+    //console.log(`${num2}=null`);
 if (n1 == 0){
-    console.log(n1);
+    //console.log(n1);
 } else if (n1 === n2){
-    console.log(`${n1}=${n2}`);
+    //console.log(`${n1}=${n2}`);
 } else {
-    console.log(`${n1}!=${n2}`);
+    //console.log(`${n1}!=${n2}`);
 }
+
+//Otro tipo de condición (Es un poco mas estructurado 'SWITCH')
+let num = 5
+let rec = num % 2;
+switch (rec) {
+    case 0:
+        console.log(`${rec} - ${num} Es Par`);
+        break;
+    case 1:
+        console.log(`${rec} - ${num} Es Negativo`);
+        break;
+    
+        default:
+            if (isNaN(rec)) //isNaN: función que permite saber si el valor dado en parentesis dio como resultado un valor no válido
+                console.log(`${rec}=Error`);
+            break;
+}
+console.log("Salí del switch")
