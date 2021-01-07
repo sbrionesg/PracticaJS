@@ -95,6 +95,11 @@ while(i < colores.length && colores[i] != "blue"){
 //bucle for usado más para incrementos o decrementos automáticos
 console.log("recorrido for in", colores)
 for(let i = 0; i < colores.length; i++) {
-    console.log(i, colores[i]);
+    //console.log(i, colores[i]);
 }
 
+//in
+console.log("Recorrido for in", colores)
+for (let j in colores){
+    console.log(j, colores[j])
+}
