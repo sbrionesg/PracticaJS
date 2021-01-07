@@ -81,7 +81,7 @@ switch (rec) {
                 console.log(`${rec}=Error`);
             break;
 }
-console.log("Salí del switch")
+//console.log("Salí del switch")
 
 //bucles incremento ++
 //while
@@ -93,13 +93,33 @@ while(i < colores.length && colores[i] != "blue"){
 }
 
 //bucle for usado más para incrementos o decrementos automáticos
-console.log("recorrido for in", colores)
+//console.log("recorrido for in", colores)
 for(let i = 0; i < colores.length; i++) {
     //console.log(i, colores[i]);
 }
 
 //in
-console.log("Recorrido for in", colores)
+//console.log("Recorrido for in", colores)
 for (let j in colores){
-    console.log(j, colores[j])
+    //console.log(j, colores[j])
+}
+// of 
+//console.log("recorrido for of", colores)
+for (let color of colores){
+    //console.log(color)
+}
+//trabajar en cadenas
+let nombre="Sol"
+for (let caracter of nombre){
+    //console.log(caracter)
+}
+//Trabajar con un arreglo de objetos
+const Personas = [
+    {"nombre": "Pepe", "apellidos": "Perez", "edad": "34"},
+    {"nombre": "Ana", "apellidos": "Gomez"},
+    {"nombre":"Daniel", "apellidos": "Vera"}
+]
+console.log("of");
+for(let persona of Personas){
+    console.log(persona, persona.nombre, persona.apellidos, persona.edad)
 }
