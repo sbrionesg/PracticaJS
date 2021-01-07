@@ -82,3 +82,12 @@ switch (rec) {
             break;
 }
 console.log("Salí del switch")
+
+//bucles incremento ++
+//while
+let i = 0
+console.log("bucle while", colores)
+while(i < colores.length && colores[i] != "blue"){
+    console.log(i, colores[i])
+    i = i + 1
+}
