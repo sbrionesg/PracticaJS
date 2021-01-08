@@ -115,11 +115,36 @@ for (let caracter of nombre){
 }
 //Trabajar con un arreglo de objetos
 const Personas = [
-    {"nombre": "Pepe", "apellidos": "Perez", "edad": "34"},
-    {"nombre": "Ana", "apellidos": "Gomez"},
+    {"nombre": "pepe", "apellidos": "perez", "edad": "34"},
+    {"nombre": "ana", "apellidos": "gomez"},
     {"nombre":"Daniel", "apellidos": "Vera"}
 ]
-console.log("of");
+//console.log("of");
 for(let persona of Personas){
-    console.log(persona, persona.nombre, persona.apellidos, persona.edad)
+    //console.log(persona, persona.nombre, persona.apellidos, persona.edad)
 }
+//RECORRIDOS DE OBJETOS ITERABLES
+
+//forEach
+//se puede usar de esta manera agregando un if en la funcion
+//console.log("Foreach");
+Personas.forEach(persona => {
+    if (persona.nombre != "ana")
+        console.log(persona.nombre)
+})
+//o de esta manera
+//console.log("Foreach");
+//Personas.forEach(persona => console.log(persona.nombre))
+
+//map: sirve para leer un objeto y extraer algo de ese objeto.
+const persons = Personas.map(person => person.nombre)
+//console.log("Map", persons);
+
+//filter: devuelve de un objeto parte de ese objeto según la condición dada
+//Para usar filter siempre va a pedir una condición
+const person = Personas.filter(person => person.nombre != "ana")
+//console.log("Filter", person);
+
+//find: devuelve solo el objeto que condiciones
+const onePerson = Personas.find(person => person.nombre === "ana")
+console.log("Find", onePerson);
