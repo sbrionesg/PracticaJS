@@ -194,10 +194,22 @@ console.log(divi(8));
 fetch('https://pokeapi.co/api/v2/pokemon/')
     .then(res => res.json())
         .then(datos => {
-        console.log(datos.results);
-        datos.results.forEach(poke => console.log(poke.name, poke.url))
+        //console.log(datos.results);
+        //datos.results.forEach(poke => console.log(poke.name, poke.url))
     })
     //catch es un como else
     .catch(error => console.log("Error del Api", error))
 
-    
+    //async await : devuelve un objeto asincrono
+
+    const obtenerDatos = async () => {
+        try{
+            const res = await fetch ('https://pokeapi.co/api/v2/pokemon/')
+            const datos = await res.json()
+            console.log("Async await");
+            datos.results.forEach(poke => console.log(poke.name))
+        }catch (error){
+            console.log("Error del Api con Async", error);
+        }
+    }
+    obtenerDatos()
