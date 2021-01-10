@@ -189,3 +189,15 @@ const divi = (n1, n2 = 4) => {
     return resp
 }
 console.log(divi(8));
+
+//fecth. Sirve para consumir api(respuesta del servidor que entrega una respuesta con datos para ser consumidos)
+fetch('https://pokeapi.co/api/v2/pokemon/')
+    .then(res => res.json())
+        .then(datos => {
+        console.log(datos.results);
+        datos.results.forEach(poke => console.log(poke.name, poke.url))
+    })
+    //catch es un como else
+    .catch(error => console.log("Error del Api", error))
+
+    
