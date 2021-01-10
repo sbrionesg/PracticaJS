@@ -148,3 +148,44 @@ const person = Personas.filter(person => person.nombre != "ana")
 //find: devuelve solo el objeto que condiciones
 const onePerson = Personas.find(person => person.nombre === "ana")
 console.log("Find", onePerson);
+
+
+//PRACTICA  31/12/2020
+//FUNCIONES
+function sumar() {
+    console.log(5 + 2);
+}
+sumar()
+const suma = () => console.log(5+1);
+suma()
+function multiplicar (n1, n2){
+    return n1 * n2
+}
+let resp = multiplicar(5, 2)
+console.log("Sin arrow", resp);
+const multi = (n1, n2) => n1 * n2
+console.log(multi(5,2));
+
+function dividir(n1, n2 = 4){
+    let resp= 0
+    try{
+        resp = n1/n2
+    } catch(e){
+        console.log("Ha cometido un error; ", e.message);
+    }
+    return resp
+}
+resp =dividir (8,8)
+console.log("Sin Arrow", resp);
+resp=dividir(8,0)
+console.log(resp);
+const divi = (n1, n2 = 4) => {
+    let resp = 0
+    try{
+        resp= n1/n2
+    } catch (e) {
+        console.log("Ha ocurrido un error: ", e.message)
+    }
+    return resp
+}
+console.log(divi(8));
