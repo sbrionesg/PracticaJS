@@ -206,10 +206,49 @@ fetch('https://pokeapi.co/api/v2/pokemon/')
         try{
             const res = await fetch ('https://pokeapi.co/api/v2/pokemon/')
             const datos = await res.json()
-            console.log("Async await");
-            datos.results.forEach(poke => console.log(poke.name))
+            //console.log("Async await");
+            //datos.results.forEach(poke => console.log(poke.name))
         }catch (error){
             console.log("Error del Api con Async", error);
         }
     }
     obtenerDatos()
+
+    //DOM
+    let contenido = document.getElementById('contenedor')
+    let variable = document.getElementById('variable')
+    console.log(contenido);
+    console.log(variable);
+    variable.innerHTML = 'Enteros, Decimales, String, Boleanas, fechas';
+    variable.style.color="red"
+    variable.style.background="#000"
+    console.log(variable);
+    //let concepto = document.querySelector('.concepto')
+    //console.log(concepto);
+    //concepto.innerHTML = "Area de memoria"
+
+    let conceptos = document.querySelectorAll('.concepto')
+    let cont = 1
+    conceptos.forEach(parrafo => {
+        parrafo.innerHTML = `Area de memoria#${cont}`
+        console.log(parrafo);
+        cont = cont + 1
+    })
+    console.log(conceptos);
+
+    //eventos
+    let boton = document.getElementById('boton2')
+    let valor = document.getElementById('valor')
+    boton.addEventListener('mouseover', () => {
+        console.log("Has pasado el mouse");
+    })
+    boton.addEventListener('click', () => {
+        let nodo = document.createElement("p")
+        nodo.innerHTML = "Nuevo Elemento"
+        nodo.style.color = "red"
+        contenido.appendChild(nodo)
+    })
+    valor.addEventListener('keypress', (e) => {
+        console.log(e.target.value);
+    })
+// PRINCIPALES EVENTOS : CLICK, MOUSEOVER, METOMOUSE, MASTERHACK, KEYPRESS, ENTRE OTROS 
